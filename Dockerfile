@@ -8,7 +8,7 @@ RUN apt-get install -y -qq krb5-user libkrb5-dev
 RUN rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install --upgrade pip
-RUN pip3 install -q ansible msrestazure azure==2.0.0 netaddr ansible-lint pywinrm[kerberos]
+RUN pip3 install -q ansible[azure] ansible-lint pywinrm[kerberos]
 
 WORKDIR /ansible
 
